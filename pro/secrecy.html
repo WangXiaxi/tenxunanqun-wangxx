@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/secrecy.css" />
 	<title></title>
 </head>
 <body>
@@ -53,7 +53,7 @@
 		<div class="menu">
 			<div class="inMenu">
 				<ul>
-					<li><a class="cur">首页</a></li>
+					<li><a>首页</a></li>
 					<li class="twoLi">
 						<a>密保工具</a>
 						<div class="sele">
@@ -132,47 +132,29 @@
 				<i class="dele"></i>
 			</div>
 			<div class="inner">
-				<div class="entrPag">
-					<h2>帐号密码登录</h2>
-					<p>推荐使用<a>快速安全登录</a>，防止盗号。</p>
-					<form class="entr" action="">
-						<div class="bord">
-							<label class="text" for="u">支持QQ号/邮箱/手机号登录</label>
-							<input type="text" name="u" id="u" class="te" />
-							<i class="de"></i>
-						</div>
-						<div class="bord bord2">
-							<label class="key" for="p">密码</label>
-							<input type="password" id="p" name="p" class="pa" maxlength="16" />
-						</div>
-						<a class="sub">登录</a>
-					</form>
-					<a class="forget">忘了密码？</a>
+				<div class="choose">
+					<h3 ><i class="icon1"></i><a>密保工具箱</a></h3>
+					<a class="top">密保问题</a>
+					<a>QQ令牌</a>
+					<a>密保问题</a>
+					<div class="add"></div>
+					<a class="bot">QQ安全中心<i class="icon2"></i></a>
 				</div>
-			</div>
-		</div>
-		<div class="funt">
-			<div class="inFunt">
-				<a class="oneA">
-					<p class="intro"><i class="i-icon icon1"></i><span>账号申诉</span></p>
-					<p class="des" style="clear:both;">申诉和辅助好友申诉</p>
-				</a>
-				<a class="twoA">
-					<p class="intro"><i class="i-icon icon2"></i><span>紧急解冻</span></p>
-					<p class="des" style="clear:both;">QQ被盗？立即阻止损失</p>
-				</a>
-				<a class="threeA">
-					<p class="intro"><i class="i-icon icon3"></i><span>账号解封</span></p>
-					<p class="des" style="clear:both;">解除保护模式，恢复登录</p>
-				</a>
-				<a class="fourA">
-					<p class="intro"><i class="i-icon icon4"></i><span>找回密码</span></p>
-					<p class="des" style="clear:both;">帮您快速找回QQ密码</p>
-				</a>
-				<a class="fiveA">
-					<p class="intro"><i class="i-icon icon5"></i><span>密保手机</span></p>
-					<p class="des" style="clear:both;">绑定或更换密保手机</p>
-				</a>
+				<div class="center">
+					<div class="first">
+						<div class="topInner">
+							<span>推荐密保工具：</span>
+							<a class="pub-a"><i class="pub-i dif1"></i>密保手机</a>
+							<a class="pub-a"><i class="pub-i dif1"></i>手机令牌</a>
+							<a class="pub-a"><i class="pub-i dif1"></i>QQ令牌</a>
+						</div>
+						<p class="des"></p>
+					</div>
+					<div class="two"></div>
+					<div class="three"></div>
+					<div class="four"></div>
+					<div class="five"></div>
+				</div>
 			</div>
 		</div>
 		<div class="bottom">
@@ -195,26 +177,6 @@
 			});
 		}
 		clickDele();
-		function input(){
-			$(".entr .bord input").focus(function(){
-				$(this).siblings("label").css("color","#ddd");
-			}).blur(function(){
-				$(this).val("").siblings("label").css("color","#aaa").css("display","block").siblings("i.de").css("display","none");
-			}).keyup(function(){
-				if ($(this).val() != "") {
-					$(this).siblings("label").css("display","none").siblings("i.de").css("display","block");
-
-				}else{
-					$(this).siblings("label").css("display","block").siblings("i.de").css("display","none");
-				}
-			});
-			$(".entr .bord i.de").click(function(){
-				$(this).css("display","none").siblings("input").focus().val("");
-
-			});	
-		}
-
-		input();
 	</script>
 </body>
 </html>

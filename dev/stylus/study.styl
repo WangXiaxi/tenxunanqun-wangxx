@@ -107,8 +107,6 @@ body
 		background-repeat repeat-x
 		background-position 0 -86px
 		height 41px
-		position relative 
-		z-index 2
 		& .inMenu
 			margin 0 auto
 			width 904px
@@ -191,6 +189,7 @@ body
 	& .banner
 		width 100%
 		background-color #e9f1f4
+		padding-top 10px
 		& .codeFix
 			padding 20px 15px 15px
 			border 1px solid #bfd8e1
@@ -223,155 +222,72 @@ body
 				background url(../img/bg_close_qr.png) no-repeat center
 				cursor pointer
 		& .inner
-			width 915px
-			height 382px
-			padding-top 13px
-			overflow hidden
-			margin auto
-			position relative
-			background url(https://aq.qq.com/v2/images/login_banner.jpg) -80px top no-repeat
-			& .entrPag
-				width 379px
-				height 356px
-				position absolute
-				z-index 1	
-				background #fff
-				top 18px
-				right 0
-				box-shadow 0 0 3px 2px #fff
-				font-family "Microsoft YaHei"
-				overflow hidden
-				& h2
-					font-size 20px
-					color #333
-					text-align center
-					font-weight 100
-					margin-top 42px
-				& .spec
-					color red
-					font-size 14px
-					position absolute
-					left 55px
-					top 100px
-				& p 
-					margin-top 16px
-					text-align center
-					font-size 16px
-					line-height 21px
-					color #666
-					& a
-						color #3481cf
-						&:hover 
-							text-decoration underline
-				& .forget
-						position absolute
-						bottom 5px
-						right 8px
-						color #666
-						&:hover 
-							text-decoration underline
-				& .entr
-					width 272px
-					margin 0 auto
-					padding-top 36px	
-					& .bord
-						width 100%
-						background-image url(../img/icon2.png)
-						background-position -1px -1px
-						height 41px
-						position relative
-						& i.de
-							width 21px
-							height 21px
-							display none
-							background url(../img/icon2.png) -116px -160px no-repeat
-							position absolute
-							top 10px
-							right 15px
-							cursor pointer
-						& label
-							position absolute
-							top 11px
-							left 13px
-							font-size 14px
-							cursor text
-							color #aaa
-						& input
-							width 258px
-							position relative
-							top 2px
-							left 2px
-							padding 10px 0 10px 10px
-							line-height 18px
-							color #333
-							font-family Arial
-							font-size 16px
-							background 0
-							border 0
-					& .bord2
-						margin-top 14px
-					& a.sub
-						display block 
-						text-align center
-						background-color #86ce2f
-						line-height 
-						width 100%
-						height 40px
-						line-height 40px
-						font-size 17px
-						font-family Microsoft YaHei
-						color #fff
-						margin-top 15px
-						
-							
-	& .funt
-		width 100%
-		& .inFunt
-			margin auto
 			width 910px
-			height 145px
-			margin-top 15px
-			border-bottom 1px solid #efefef 
-			background url(https://aq.qq.com/v2/images/index_info.jpg) top no-repeat
-			& a
-				display block
-				padding 20px 20px 0 20px
-				width 142px
-				height 125px
-				overflow hidden
+			margin auto
+			min-height 450px
+			overflow hidden
+			background url(https://aq.qq.com/v2/images/index_center.jpg) left top repeat-y
+			& .center
 				float left
-				transition all .3s 
-				&:hover
-					background-image url(https://aq.qq.com/v2/images/index_info.jpg)
-					background-position 0 -148px
-				& p.intro
-					& span
-						line-height 32px
-						color #266392
-						font-size 14px
-						padding-left 12px
-						font-weight bold
-					& .i-icon
-						display block
-						width 32px
-						height 32px
+				width 620px
+				min-height 400px
+				background-color yellow
+				overflow hidden
+				a:hover
+					text-decoration underline
+				& .bannerGai
+					width 620px
+					height 230px
+					background red
+				& .textIn
+					padding-left 20px
+					& .textIn-left
+						width 300px
 						float left
-						background-image url(../img/icon.png)
-					& .icon1
-						background-position 0 -1867px
-					& .icon2
-						background-position -60px -1491px
-					& .icon3
-						background-position 0 -1361px
-					& .icon4
-						background-position 0 -1741px
-					& .icon5
-						background-position 0 -1320px
-				& p.des
-					padding-top 8px
-					color #999
-					line-height 20px
-					font-size 12px
+						& .smallTit
+							width 200px
+							height 18px
+							margin-top 22px
+							margin-bottom 8px
+							background-image url(../img/tit.png)
+						& .pic
+							overflow hidden
+							padding-top 5px
+							padding-bottom 10px
+							img
+								float left
+								padding 1px
+								border 1px solid #e7e7e7
+								margin-right 9px
+							a 
+								color #266392
+								font-size 14px
+							p
+								padding-top 5px
+								line-height 18px
+								font-size 12px
+					& .textIn-right
+						width 245px
+						height 300px
+						padding-left 40px
+						padding-right 15px
+						float left
+						background-color red
+			& .rightMain
+				float left
+				min-height 400px
+				background-color skyblue
+				width 250px
+				padding 15px 20px 0 15px
+					
+			
+		& .add2
+			clear both
+			width 910px
+			margin 0 auto
+			height 5px
+			background-image url(../img/12.png)
+			background-position 0 -456px
 	& .bottom
 		width 915px	
 		margin auto
@@ -387,10 +303,3 @@ body
 				&:hover
 					text-decoration underline
 					color rgb(189, 10, 1)
-					
-				
-		
-				
-					
-				
-			

@@ -135,15 +135,16 @@
 				<div class="entrPag">
 					<h2>帐号密码登录</h2>
 					<p>推荐使用<a>快速安全登录</a>，防止盗号。</p>
+					<p class="spec" style="display:none;">请输入正确的号码</p>
 					<form class="entr" action="">
 						<div class="bord">
 							<label class="text" for="u">支持QQ号/邮箱/手机号登录</label>
-							<input type="text" name="u" id="u" class="te" />
+							<input type="text" name="u" id="u" autocomplete="off" class="te" />
 							<i class="de"></i>
 						</div>
 						<div class="bord bord2">
 							<label class="key" for="p">密码</label>
-							<input type="password" id="p" name="p" class="pa" maxlength="16" />
+							<input type="password" id="p" name="p" autocomplete="off" class="pa" maxlength="16" />
 						</div>
 						<a class="sub">登录</a>
 					</form>
@@ -199,18 +200,26 @@
 			$(".entr .bord input").focus(function(){
 				$(this).siblings("label").css("color","#ddd");
 			}).blur(function(){
-				$(this).val("").siblings("label").css("color","#aaa").css("display","block").siblings("i.de").css("display","none");
+				if ($(this).val() == "") {
+					$(this).siblings("label").css("color","#aaa").css("display","block");
+				}
 			}).keyup(function(){
 				if ($(this).val() != "") {
 					$(this).siblings("label").css("display","none").siblings("i.de").css("display","block");
-
 				}else{
 					$(this).siblings("label").css("display","block").siblings("i.de").css("display","none");
 				}
 			});
-			$(".entr .bord i.de").click(function(){
+			$(".entr .bord input.te").blur(function(){
+				if (/[\u4E00-\u9FA5]/g.test($(this).val())) {
+					$(".entrPag .spec").css("display","block");
+				}else{
+					$(".entrPag .spec").css("display","none");
+				}
+			})
+			$(".entr .bord .de").click(function(){
+				$(".entrPag .spec").css("display","none");
 				$(this).css("display","none").siblings("input").focus().val("");
-
 			});	
 		}
 

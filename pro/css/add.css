@@ -1,0 +1,12 @@
+.buttons em{
+	filter:alpha(opacity=50);
+}
+.buttons em.cur{
+	filter:alpha(opacity=100);
+}
+.bannerGai span{
+	filter:alpha(opacity=30); 
+}
+.bannerGai span:hover{
+	filter:alpha(opacity=70); 
+}

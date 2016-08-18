@@ -8,7 +8,7 @@ ul
 body
 	background #fff
 	font-size 12px
-	font-family Tahoma,"宋体"
+	font-family "宋体"
 	width 100%
 	& .top-tit
 		margin 0 auto
@@ -33,12 +33,14 @@ body
 				font-size 12px
 				padding-left 9px
 				float left
+				height 19px
 			& .diff
 				padding-left 3px
-				height 17px
+				height 19px
 				position relative
 				z-index 10
 				top -1px
+				padding-top 1px
 				& a.cl
 					display inline-block
 					position relative
@@ -51,6 +53,7 @@ body
 					padding-bottom 1px
 					& i.icon
 						display inline-block
+ 
 						width 8px
 						height 8px
 						background url(../img/12.PNG)
@@ -120,6 +123,9 @@ body
 					font-size 18px
 					color #fff
 					margin-right 30px
+					&>a
+						color #fff
+						text-decoration none
 					&>a:hover+.sele
 						display block
 					& .sele
@@ -130,12 +136,12 @@ body
 						box-shadow 0 0 0 1px #e0e0e0 inset
 						top 41px
 						background-color #fff
-						background-image url(../img/bg.jpg)
-						background-repeat repeat-x	
+						padding-top 4px
 						z-index 3
 						&:hover
 							display block
 						&>a
+							height 42px
 							display block
 							color #266392
 							line-height 42px

@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/study.css" />
+	<link rel="stylesheet" type="text/css" href="css/add.css" />
 	<title></title>
 </head>
 <body>
@@ -54,9 +55,9 @@
 		<div class="menu">
 			<div class="inMenu">
 				<ul>
-					<li><a>首页</a></li>
+					<li><a href="index.html">首页</a></li>
 					<li class="twoLi">
-						<a>密保工具</a>
+						<a href="secrecy.html">密保工具</a>
 						<div class="sele">
 							<a>
 								<i class="i-icon ic-1"></i>
@@ -77,7 +78,7 @@
 						</div>
 					</li>
 					<li class="threeLi">
-						<a>账户保护</a>
+						<a href="safe.html">账户保护</a>
 						<div class="sele">
 							<a>
 								<i class="i-icon ic-1"></i>
@@ -118,7 +119,7 @@
 							</a>
 						</div>	
 					</li>
-					<li><a>安全学堂</a></li>
+					<li><a class="cur">安全学堂</a></li>
 				</ul>
 				<a class="mobile-icon"></a>
 			</div>
@@ -136,7 +137,8 @@
 			<div class="inner">
 				<div class="center">
 					<div class="bannerGai">
-						
+						<span class="perv"></span>
+						<span class="next"></span>
 					</div>
 					<div class="textIn">
 						<div class="textIn-left">
@@ -166,26 +168,44 @@
 							</div>
 						</div>
 						<div class="textIn-right">
-							<div class="pub1">
-								<p class="cla">专题</p>
-								<div class="page"></div>
-								<div class="MainInText">
-									<ul>
-										<li>
-											<a>守望</a>
-											<span>2014-09-23</span>
-										</li>
-									</ul>
-									
-								</div>
+							<div class="pub1 pub">
+								
 							</div>
-							<div class="pub2"></div>
-							<div class="pub3"></div>
+							<div class="pub2 pub">
+							
+							</div>
+							<div class="pub3 pub">
+								
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="rightMain">
-					
+					<h3>常用功能</h3>
+					<a class="topCla">
+						<i class="one-i"></i>
+						<p class="tit">保护QQ</p>
+						<p class="des">不怕密码泄露，杜绝恶意登录</p>
+					</a>
+					<a class="topCla">
+						<i class="two-i"></i>
+						<p class="tit">保护QQ</p>
+						<p class="des">不怕密码泄露，杜绝恶意登录</p>
+					</a>
+					<a class="topCla">
+						<i class="three-i"></i>
+						<p class="tit">保护QQ</p>
+						<p class="des">不怕密码泄露，杜绝恶意登录</p>
+					</a>
+					<a class="topCla">
+						<i class="four-i"></i>
+						<p class="tit">保护QQ</p>
+						<p class="des">不怕密码泄露，杜绝恶意登录</p>
+					</a>
+					<h3 class="view"><a>公告</a></h3>
+					<ul class="notice">
+						
+					</ul>
 				</div>
 			</div>
 			<div class="add2"></div>
@@ -203,13 +223,22 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="../lib/jquery@1.7.1.min.js"></script>
+	<script type="text/javascript" src="../dev/js/study.js"></script>
 	<script>
+	(function($){
 		function clickDele(){
 			$("i.dele").click(function(){
 				$(this).parent(".codeFix").css("display","none");
 			});
 		}
+		
+		
 		clickDele();
+		var data1 = sub1.data;
+			data2 = sub2.data;
+		 	data3 = sub3.data;
+		startText(data1,data2,data3,1,2,3,7,4,4);
+	})(jQuery);
 	</script>
 </body>
 </html>

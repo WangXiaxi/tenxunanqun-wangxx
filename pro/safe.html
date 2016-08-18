@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/safe.css" />
+	<link rel="stylesheet" type="text/css" href="css/add.css" />
 	<title></title>
 </head>
 <body>
@@ -54,9 +55,9 @@
 		<div class="menu">
 			<div class="inMenu">
 				<ul>
-					<li><a>首页</a></li>
+					<li><a href="index.html">首页</a></li>
 					<li class="twoLi">
-						<a>密保工具</a>
+						<a href="secrecy.html">密保工具</a>
 						<div class="sele">
 							<a>
 								<i class="i-icon ic-1"></i>
@@ -77,7 +78,7 @@
 						</div>
 					</li>
 					<li class="threeLi">
-						<a>账户保护</a>
+						<a class="cur ">账户保护</a>
 						<div class="sele">
 							<a>
 								<i class="i-icon ic-1"></i>
@@ -118,7 +119,7 @@
 							</a>
 						</div>	
 					</li>
-					<li><a>安全学堂</a></li>
+					<li><a href="study.html">安全学堂</a></li>
 				</ul>
 				<a class="mobile-icon"></a>
 			</div>
@@ -262,7 +263,7 @@
 			function setIndex(){
 				var index = Math.abs(parseInt($(".container").css("top")) / $height);
 					if (index == len) {
-						index =0
+						index = 0;
 					}
 				$(".buttons em").eq(index).addClass("cur").siblings().removeClass("cur");
 			}
@@ -275,7 +276,7 @@
 					animated = 1;
 					clearInterval(stop);
 					$(this).addClass("cur").siblings().removeClass("cur");
-					var topHigh = "-" + ($(this).index()+1)*$height;
+					var topHigh = "-" + ($(this).index())*$height;
 					$(".container").animate({
 						top : topHigh
 					},200,function(){

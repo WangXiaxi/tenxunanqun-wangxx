@@ -33,31 +33,39 @@ body
 				font-size 12px
 				padding-left 9px
 				float left
-			& .diff
-				padding-left 3px
-				height 17px
+				
+			&>.diff
+				width 64px
 				position relative
 				z-index 10
-				top -1px
+				font-size 0
+				padding-right 4px
 				& a.cl
-					display inline-block
-					position relative
-					line-height 12px
-					border 1px solid #fff
-					padding-left 5px
-					z-index 1
-					background #fff
-					padding-top 3px
-					padding-bottom 1px
+					display block
+					& span
+						font-size 12px
+						display block
+						float left
 					& i.icon
-						display inline-block
-						width 8px
+						display block
+						float right
+						margin-top 4px
+						width 12px
 						height 8px
 						background url(../img/12.PNG)
-						background-position -903px -133px
-						margin-left 6px
-						margin-right 2px
+						background-position -901px -133px	
+				& .ad1
+					display none
+					width 70px
+					height 19px
+					position absolute
+					top -3px
+					right 0
+					z-index 3
+					border 1px solid #959595
+					border-bottom 1px solid #fff
 				& .sele
+					font-size 12px
 					width 193px
 					background #fff
 					position absolute
@@ -66,8 +74,7 @@ body
 					padding 10px
 					right 0
 					display none
-					&:before
-						content ""
+					& .ad2
 						width 1px
 						height 10px
 						position absolute
@@ -92,11 +99,10 @@ body
 							color #535353	
 							font-size 12px
 							padding-top 3px
-			& .diff:hover a.cl
-				border-top 1px solid #959595
-				border-left 1px solid #959595
-				border-right 1px solid #959595
+		
 			& .diff:hover .sele
+				display block
+			& .diff:hover .ad1
 				display block
 			& .diff:hover i.icon
 				transform rotate(180deg)

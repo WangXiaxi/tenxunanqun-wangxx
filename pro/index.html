@@ -227,6 +227,28 @@
 		}
 
 		input();
+		(function($){
+			function submit(){
+				$("form a.sub").click(function(){
+					$.ajax({
+						url:"http://www.ikindness.cn/api/test/message",
+						type:"get",
+						data:{
+						tel:$("input[name=\"u\"]").val()
+						},
+						success:function(data){
+							console.log($("input[name=\"p\"]").val(),data.data);
+							if ($("input[name=\"p\"]").val() == data.data) {
+								alert("登录成功");
+							}else{
+								alert("登录失败");
+							}
+						}
+					});
+				});	
+			}
+			submit();
+		})(jQuery);
 	</script>
 </body>
 </html>

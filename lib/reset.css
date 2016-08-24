@@ -42,9 +42,6 @@ i{
 	font-style:normal;
 	font-family:Microsoft Yahei;
 }
-*:before, *:after{
-	box-sizing:border-box;
-}
 ::-webkit-file-upload-button{
 	cursor:pointer;
 }

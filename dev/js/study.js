@@ -125,14 +125,12 @@ var startText = (function($){
 			}
 			function setIndex(jue){
 				var index = Math.abs(parseInt($(".container").css("left")) / $width) - 1 + jue;
-					console.log(index);
+					
 					if (index == len) {
 						index = 0;
 					}else if (index == -1) {
 						index = len-1;
 					}
-					console.log(len);
-					console.log(index);
 				$(".buttons em").eq(index).addClass("cur").siblings().removeClass("cur");
 			}
 
